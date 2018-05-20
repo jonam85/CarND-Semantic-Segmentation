@@ -1,6 +1,11 @@
 # Semantic Segmentation
+## Overview
+
+This repository is as part of my Submission to the Project 2: Semantic Segmentation for Self Driving Car Nano Degree Program Term 3.
+
 ### Introduction
-In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
+
+In this project, a model is created to label the pixels of road in images using a Fully Convolutional Network (FCN). The pre-trained VGG Net is used as a start up for this code and the FCNs are added with Skip layers and Transposed convolutions to update the pixel back with the predicted class (road).
 
 ### Setup
 ##### GPU
@@ -16,33 +21,36 @@ Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road
 
 ### Start
 ##### Implement
-Implement the code in the `main.py` module indicated by the "TODO" comments.
-The comments indicated with "OPTIONAL" tag are not required to complete.
+The template code in the `main.py` module was already provided by Udacity, where the sections indicated by the "TODO" comments were implemented based on the lecture videos.
 ##### Run
 Run the following command to run the project:
 ```
 python main.py
+
+# Parsers are implemented for epochs and batch size
+# To run the code with 5 epochs and 20 batch size.
+python main.py --e 5 --b 20
 ```
 **Note** If running this in Jupyter Notebook system messages, such as those regarding test status, may appear in the terminal rather than the notebook.
 
-### Submission
-1. Ensure you've passed all the unit tests.
-2. Ensure you pass all points on [the rubric](https://review.udacity.com/#!/rubrics/989/view).
-3. Submit the following in a zip file.
- - `helper.py`
- - `main.py`
- - `project_tests.py`
- - Newest inference images from `runs` folder  (**all images from the most recent run**)
- 
- ### Tips
-- The link for the frozen `VGG16` model is hardcoded into `helper.py`.  The model can be found [here](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/vgg.zip)
-- The model is not vanilla `VGG16`, but a fully convolutional version, which already contains the 1x1 convolutions to replace the fully connected layers. Please see this [forum post](https://discussions.udacity.com/t/here-is-some-advice-and-clarifications-about-the-semantic-segmentation-project/403100/8?u=subodh.malgonde) for more information.  A summary of additional points, follow. 
-- The original FCN-8s was trained in stages. The authors later uploaded a version that was trained all at once to their GitHub repo.  The version in the GitHub repo has one important difference: The outputs of pooling layers 3 and 4 are scaled before they are fed into the 1x1 convolutions.  As a result, some students have found that the model learns much better with the scaling layers included. The model may not converge substantially faster, but may reach a higher IoU and accuracy. 
-- When adding l2-regularization, setting a regularizer in the arguments of the `tf.layers` is not enough. Regularization loss terms must be manually added to your loss function. otherwise regularization is not implemented.
- 
-### Using GitHub and Creating Effective READMEs
-If you are unfamiliar with GitHub , Udacity has a brief [GitHub tutorial](http://blog.udacity.com/2015/06/a-beginners-git-github-tutorial.html) to get you started. Udacity also provides a more detailed free [course on git and GitHub](https://www.udacity.com/course/how-to-use-git-and-github--ud775).
+### Tips
 
-To learn about REAMDE files and Markdown, Udacity provides a free [course on READMEs](https://www.udacity.com/courses/ud777), as well. 
+- The link for the frozen `VGG16` model is hardcoded into `helper.py`. The model can be found [here](https://s3-us-west-1.amazonaws.com/udacity-selfdrivingcar/vgg.zip)
+- The model is not vanilla `VGG16`, but a fully convolutional version, which already contains the 1x1 convolutions to replace the fully connected layers. Please see this [forum post](https://discussions.udacity.com/t/here-is-some-advice-and-clarifications-about-the-semantic-segmentation-project/403100/8?u=subodh.malgonde) for more information. A summary of additional points, follow.
+- The original FCN-8s was trained in stages. The authors later uploaded a version that was trained all at once to their GitHub repo. The version in the GitHub repo has one important difference: The outputs of pooling layers 3 and 4 are scaled before they are fed into the 1x1 convolutions. As a result, some students have found that the model learns much better with the scaling layers included. The model may not converge substantially faster, but may reach a higher IoU and accuracy.
 
-GitHub also provides a [tutorial](https://guides.github.com/features/mastering-markdown/) about creating Markdown files.
+### Results
+
+The below are the results of the network that is trained with 10 Epochs and 10 Batch size.
+
+| RGB Image                                | Model Output                             |
+| ---------------------------------------- | ---------------------------------------- |
+| ![um_000016](readme_imgs/rgb/um_000016.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/um_000016.png) |
+| ![um_000016](readme_imgs/rgb/umm_000008.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000008.png){:height="576px" width="170px"} |
+| ![um_000016](readme_imgs/rgb/umm_000012.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000012.png){:height="576px" width="170px"} |
+| ![um_000016](readme_imgs/rgb/umm_000016.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000016.png){:height="576px" width="170px"} |
+| ![um_000016](readme_imgs/rgb/umm_000024.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000024.png){:height="576px" width="170px"} |
+| ![um_000016](readme_imgs/rgb/umm_000030.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000030.png){:height="576px" width="170px"} |
+
+
+
