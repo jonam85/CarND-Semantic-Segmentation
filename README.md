@@ -39,6 +39,55 @@ python main.py --e 5 --b 20
 - The model is not vanilla `VGG16`, but a fully convolutional version, which already contains the 1x1 convolutions to replace the fully connected layers. Please see this [forum post](https://discussions.udacity.com/t/here-is-some-advice-and-clarifications-about-the-semantic-segmentation-project/403100/8?u=subodh.malgonde) for more information. A summary of additional points, follow.
 - The original FCN-8s was trained in stages. The authors later uploaded a version that was trained all at once to their GitHub repo. The version in the GitHub repo has one important difference: The outputs of pooling layers 3 and 4 are scaled before they are fed into the 1x1 convolutions. As a result, some students have found that the model learns much better with the scaling layers included. The model may not converge substantially faster, but may reach a higher IoU and accuracy.
 
+### Rubrics Points
+
+* The `load_vgg` , `layers` , `optimize` , `train_nn`  functions were implemented and the terminal log shown that the test functions for each of these functions were passed.
+
+* The training loss shows a decreasing trend over epochs.
+
+* ````
+  Training...
+  EPOCH 0 ...
+  Loss:1.2339657545089722 at 0 epoch.
+  Loss:5.06483268737793 at 0 epoch.
+  Loss:0.893103301525116 at 0 epoch.
+  Loss:0.5977476239204407 at 0 epoch.
+  Loss:0.5383155345916748 at 0 epoch.
+  Loss:0.509601354598999 at 0 epoch.
+  Loss:0.5511192083358765 at 0 epoch.
+  Loss:0.47604361176490784 at 0 epoch.
+  Loss:0.45646384358406067 at 0 epoch.
+  Loss:0.4270135462284088 at 0 epoch.
+  Loss:0.3912403881549835 at 0 epoch.
+  Loss:0.4010237455368042 at 0 epoch.
+  Loss:0.43363824486732483 at 0 epoch.
+  Loss:0.3944230377674103 at 0 epoch.
+  Loss:0.34957513213157654 at 0 epoch.
+  Loss:0.389269083738327 at 0 epoch.
+  Loss:0.38075441122055054 at 0 epoch.
+  ......
+  EPOCH 5 ...
+  Loss:0.119459368288517 at 5 epoch.
+  Loss:0.13350838422775269 at 5 epoch.
+  Loss:0.12623776495456696 at 5 epoch.
+  Loss:0.10612867027521133 at 5 epoch.
+  Loss:0.1686045527458191 at 5 epoch.
+  Loss:0.1219664141535759 at 5 epoch.
+  Loss:0.11466147005558014 at 5 epoch.
+  ......
+  Loss:0.08450588583946228 at 9 epoch.
+  Loss:0.10541891306638718 at 9 epoch.
+  Loss:0.07912340760231018 at 9 epoch.
+  Loss:0.11285613477230072 at 9 epoch.
+  Loss:0.10042713582515717 at 9 epoch.
+  Loss:0.07472262531518936 at 9 epoch.
+  Loss:0.08860313147306442 at 9 epoch.
+  Loss:0.13801294565200806 at 9 epoch.
+  Model Saved
+  ````
+
+* The labelled images are generated in the ./runs/ directory and shows a good amount of road pixel predictions.
+
 ### Results
 
 The below are the results of the network that is trained with 10 Epochs and 10 Batch size.
@@ -51,6 +100,8 @@ The below are the results of the network that is trained with 10 Epochs and 10 B
 | ![um_000016](readme_imgs/rgb/umm_000016.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000016.png){:height="576px" width="170px"} |
 | ![um_000016](readme_imgs/rgb/umm_000024.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000024.png){:height="576px" width="170px"} |
 | ![um_000016](readme_imgs/rgb/umm_000030.png){:height="576px" width="170px"} | ![um_000016](readme_imgs/seg/umm_000030.png){:height="576px" width="170px"} |
+
+
 
 
 
