@@ -1,0 +1,335 @@
+ubuntu@ip-172-31-2-10:~/projects/CarND-Semantic-Segmentation$ python main.py --e 10 --b 10
+TensorFlow Version: 1.2.1
+2018-05-20 14:52:24.107858: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2018-05-20 14:52:24.108217: I tensorflow/core/common_runtime/gpu/gpu_device.cc:940] Found device 0 with properties:
+name: Tesla M60
+major: 5 minor: 2 memoryClockRate (GHz) 1.1775
+pciBusID 0000:00:1e.0
+Total memory: 7.43GiB
+Free memory: 7.36GiB
+2018-05-20 14:52:24.108241: I tensorflow/core/common_runtime/gpu/gpu_device.cc:961] DMA: 0
+2018-05-20 14:52:24.108249: I tensorflow/core/common_runtime/gpu/gpu_device.cc:971] 0:   Y
+2018-05-20 14:52:24.108261: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M60, pci bus id: 0000:00:1e.0)
+2018-05-20 14:52:24.192285: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M60, pci bus id: 0000:00:1e.0)
+Default GPU Device: /gpu:0
+Testing Load vgg
+2018-05-20 14:52:24.193354: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M60, pci bus id: 0000:00:1e.0)
+Tests Passed
+Testing Layers
+Tests Passed
+Testing Optimize
+2018-05-20 14:52:31.370226: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M60, pci bus id: 0000:00:1e.0)
+2018-05-20 14:52:31.380531: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2018-05-20 14:52:31.380557: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 16 visible devices
+2018-05-20 14:52:31.385193: I tensorflow/compiler/xla/service/service.cc:198] XLA service 0x4ab1340 executing computations on platform Host. Devices:
+2018-05-20 14:52:31.385214: I tensorflow/compiler/xla/service/service.cc:206]   StreamExecutor device (0): <undefined>, <undefined>
+2018-05-20 14:52:31.385378: I tensorflow/compiler/xla/service/platform_util.cc:58] platform CUDA present with 1 visible devices
+2018-05-20 14:52:31.385394: I tensorflow/compiler/xla/service/platform_util.cc:58] platform Host present with 16 visible devices
+2018-05-20 14:52:31.387362: I tensorflow/compiler/xla/service/service.cc:198] XLA service 0x4aee4a0 executing computations on platform CUDA. Devices:
+2018-05-20 14:52:31.387379: I tensorflow/compiler/xla/service/service.cc:206]   StreamExecutor device (0): Tesla M60, Compute Capability 5.2
+Tests Passed
+Tests Passed
+2018-05-20 14:52:31.585453: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1030] Creating TensorFlow device (/gpu:0) -> (device: 0, name: Tesla M60, pci bus id: 0000:00:1e.0)
+Training...
+EPOCH 0 ...
+Loss:1.2339657545089722 at 0 epoch.
+Loss:5.06483268737793 at 0 epoch.
+Loss:0.893103301525116 at 0 epoch.
+Loss:0.5977476239204407 at 0 epoch.
+Loss:0.5383155345916748 at 0 epoch.
+Loss:0.509601354598999 at 0 epoch.
+Loss:0.5511192083358765 at 0 epoch.
+Loss:0.47604361176490784 at 0 epoch.
+Loss:0.45646384358406067 at 0 epoch.
+Loss:0.4270135462284088 at 0 epoch.
+Loss:0.3912403881549835 at 0 epoch.
+Loss:0.4010237455368042 at 0 epoch.
+Loss:0.43363824486732483 at 0 epoch.
+Loss:0.3944230377674103 at 0 epoch.
+Loss:0.34957513213157654 at 0 epoch.
+Loss:0.389269083738327 at 0 epoch.
+Loss:0.38075441122055054 at 0 epoch.
+Loss:0.3870048224925995 at 0 epoch.
+Loss:0.3545442521572113 at 0 epoch.
+Loss:0.29266899824142456 at 0 epoch.
+Loss:0.344334214925766 at 0 epoch.
+Loss:0.3114497661590576 at 0 epoch.
+Loss:0.25663506984710693 at 0 epoch.
+Loss:0.3275434076786041 at 0 epoch.
+Loss:0.44440752267837524 at 0 epoch.
+Loss:0.2589096426963806 at 0 epoch.
+Loss:0.32315489649772644 at 0 epoch.
+Loss:0.2882066071033478 at 0 epoch.
+Loss:0.2954724133014679 at 0 epoch.
+EPOCH 1 ...
+Loss:0.2767937481403351 at 1 epoch.
+Loss:0.25905171036720276 at 1 epoch.
+Loss:0.3207114338874817 at 1 epoch.
+Loss:0.23181764781475067 at 1 epoch.
+Loss:0.24866044521331787 at 1 epoch.
+Loss:0.24238744378089905 at 1 epoch.
+Loss:0.2800804078578949 at 1 epoch.
+Loss:0.24152113497257233 at 1 epoch.
+Loss:0.2504396438598633 at 1 epoch.
+Loss:0.2106095850467682 at 1 epoch.
+Loss:0.3321879506111145 at 1 epoch.
+Loss:0.23701347410678864 at 1 epoch.
+Loss:0.2924678921699524 at 1 epoch.
+Loss:0.24531355500221252 at 1 epoch.
+Loss:0.25686877965927124 at 1 epoch.
+Loss:0.24550142884254456 at 1 epoch.
+Loss:0.2955544888973236 at 1 epoch.
+Loss:0.24004486203193665 at 1 epoch.
+Loss:0.25261184573173523 at 1 epoch.
+Loss:0.19386708736419678 at 1 epoch.
+Loss:0.2205706238746643 at 1 epoch.
+Loss:0.2298356592655182 at 1 epoch.
+Loss:0.19411948323249817 at 1 epoch.
+Loss:0.4918513894081116 at 1 epoch.
+Loss:0.18952487409114838 at 1 epoch.
+Loss:0.21902960538864136 at 1 epoch.
+Loss:0.2233518809080124 at 1 epoch.
+Loss:0.21085281670093536 at 1 epoch.
+Loss:0.20040230453014374 at 1 epoch.
+EPOCH 2 ...
+Loss:0.19817480444908142 at 2 epoch.
+Loss:0.21153755486011505 at 2 epoch.
+Loss:0.22497804462909698 at 2 epoch.
+Loss:0.1971682459115982 at 2 epoch.
+Loss:0.18601511418819427 at 2 epoch.
+Loss:0.21616920828819275 at 2 epoch.
+Loss:0.24817748367786407 at 2 epoch.
+Loss:0.1935405135154724 at 2 epoch.
+Loss:0.19969594478607178 at 2 epoch.
+Loss:0.15875253081321716 at 2 epoch.
+Loss:0.20613844692707062 at 2 epoch.
+Loss:0.17877428233623505 at 2 epoch.
+Loss:0.1643877774477005 at 2 epoch.
+Loss:0.17469407618045807 at 2 epoch.
+Loss:0.16812744736671448 at 2 epoch.
+Loss:0.19398252665996552 at 2 epoch.
+Loss:0.1828441023826599 at 2 epoch.
+Loss:0.14142215251922607 at 2 epoch.
+Loss:0.2111651450395584 at 2 epoch.
+Loss:0.1501857191324234 at 2 epoch.
+Loss:0.1571485996246338 at 2 epoch.
+Loss:0.18965624272823334 at 2 epoch.
+Loss:0.17416143417358398 at 2 epoch.
+Loss:0.18493621051311493 at 2 epoch.
+Loss:0.17382420599460602 at 2 epoch.
+Loss:0.1667061150074005 at 2 epoch.
+Loss:0.15530794858932495 at 2 epoch.
+Loss:0.17767269909381866 at 2 epoch.
+Loss:0.15963099896907806 at 2 epoch.
+EPOCH 3 ...
+Loss:0.13543939590454102 at 3 epoch.
+Loss:0.15194852650165558 at 3 epoch.
+Loss:0.2003270536661148 at 3 epoch.
+Loss:0.22174155712127686 at 3 epoch.
+Loss:0.13400104641914368 at 3 epoch.
+Loss:0.1766527146100998 at 3 epoch.
+Loss:0.16751520335674286 at 3 epoch.
+Loss:0.1430240422487259 at 3 epoch.
+Loss:0.23197562992572784 at 3 epoch.
+Loss:0.18483953177928925 at 3 epoch.
+Loss:0.16769830882549286 at 3 epoch.
+Loss:0.152003675699234 at 3 epoch.
+Loss:0.20986738801002502 at 3 epoch.
+Loss:0.15838351845741272 at 3 epoch.
+Loss:0.14546506106853485 at 3 epoch.
+Loss:0.1854022592306137 at 3 epoch.
+Loss:0.1692211925983429 at 3 epoch.
+Loss:0.1450619101524353 at 3 epoch.
+Loss:0.12689968943595886 at 3 epoch.
+Loss:0.17689776420593262 at 3 epoch.
+Loss:0.18126055598258972 at 3 epoch.
+Loss:0.14950686693191528 at 3 epoch.
+Loss:0.14990124106407166 at 3 epoch.
+Loss:0.134527325630188 at 3 epoch.
+Loss:0.15700973570346832 at 3 epoch.
+Loss:0.15026898682117462 at 3 epoch.
+Loss:0.13470324873924255 at 3 epoch.
+Loss:0.15725545585155487 at 3 epoch.
+Loss:0.15825608372688293 at 3 epoch.
+EPOCH 4 ...
+Loss:0.13332726061344147 at 4 epoch.
+Loss:0.133544459939003 at 4 epoch.
+Loss:0.1531946212053299 at 4 epoch.
+Loss:0.14557994902133942 at 4 epoch.
+Loss:0.15883837640285492 at 4 epoch.
+Loss:0.12436407804489136 at 4 epoch.
+Loss:0.13632434606552124 at 4 epoch.
+Loss:0.15072081983089447 at 4 epoch.
+Loss:0.15446820855140686 at 4 epoch.
+Loss:0.14975623786449432 at 4 epoch.
+Loss:0.11392996460199356 at 4 epoch.
+Loss:0.160544753074646 at 4 epoch.
+Loss:0.11228463053703308 at 4 epoch.
+Loss:0.10578101873397827 at 4 epoch.
+Loss:0.11906390637159348 at 4 epoch.
+Loss:0.16184918582439423 at 4 epoch.
+Loss:0.17045673727989197 at 4 epoch.
+Loss:0.12780891358852386 at 4 epoch.
+Loss:0.1161004900932312 at 4 epoch.
+Loss:0.16448038816452026 at 4 epoch.
+Loss:0.11941424012184143 at 4 epoch.
+Loss:0.14371372759342194 at 4 epoch.
+Loss:0.14770551025867462 at 4 epoch.
+Loss:0.16407369077205658 at 4 epoch.
+Loss:0.1275341957807541 at 4 epoch.
+Loss:0.1182117834687233 at 4 epoch.
+Loss:0.1350136399269104 at 4 epoch.
+Loss:0.15613552927970886 at 4 epoch.
+Loss:0.10796265304088593 at 4 epoch.
+EPOCH 5 ...
+Loss:0.119459368288517 at 5 epoch.
+Loss:0.13350838422775269 at 5 epoch.
+Loss:0.12623776495456696 at 5 epoch.
+Loss:0.10612867027521133 at 5 epoch.
+Loss:0.1686045527458191 at 5 epoch.
+Loss:0.1219664141535759 at 5 epoch.
+Loss:0.11466147005558014 at 5 epoch.
+Loss:0.12471234798431396 at 5 epoch.
+Loss:0.12104883044958115 at 5 epoch.
+Loss:0.11275877058506012 at 5 epoch.
+Loss:0.1385246068239212 at 5 epoch.
+Loss:0.12670829892158508 at 5 epoch.
+Loss:0.11061815917491913 at 5 epoch.
+Loss:0.10021407902240753 at 5 epoch.
+Loss:0.12443272024393082 at 5 epoch.
+Loss:0.12672758102416992 at 5 epoch.
+Loss:0.11251481622457504 at 5 epoch.
+Loss:0.13547123968601227 at 5 epoch.
+Loss:0.15416178107261658 at 5 epoch.
+Loss:0.12974704802036285 at 5 epoch.
+Loss:0.12326498329639435 at 5 epoch.
+Loss:0.14600829780101776 at 5 epoch.
+Loss:0.13721857964992523 at 5 epoch.
+Loss:0.12787851691246033 at 5 epoch.
+Loss:0.1242799237370491 at 5 epoch.
+Loss:0.1315997987985611 at 5 epoch.
+Loss:0.10014956444501877 at 5 epoch.
+Loss:0.11604519933462143 at 5 epoch.
+Loss:0.12193406373262405 at 5 epoch.
+EPOCH 6 ...
+Loss:0.08959117531776428 at 6 epoch.
+Loss:0.11850065737962723 at 6 epoch.
+Loss:0.11583356559276581 at 6 epoch.
+Loss:0.11699141561985016 at 6 epoch.
+Loss:0.1265009492635727 at 6 epoch.
+Loss:0.11999236047267914 at 6 epoch.
+Loss:0.12446568161249161 at 6 epoch.
+Loss:0.09547670185565948 at 6 epoch.
+Loss:0.11729413270950317 at 6 epoch.
+Loss:0.10441631823778152 at 6 epoch.
+Loss:0.1267727017402649 at 6 epoch.
+Loss:0.10968171805143356 at 6 epoch.
+Loss:0.13104599714279175 at 6 epoch.
+Loss:0.12492303550243378 at 6 epoch.
+Loss:0.12097867578268051 at 6 epoch.
+Loss:0.10949502140283585 at 6 epoch.
+Loss:0.10530219972133636 at 6 epoch.
+Loss:0.12327906489372253 at 6 epoch.
+Loss:0.15432821214199066 at 6 epoch.
+Loss:0.1074090227484703 at 6 epoch.
+Loss:0.08938469737768173 at 6 epoch.
+Loss:0.1520094871520996 at 6 epoch.
+Loss:0.08175022155046463 at 6 epoch.
+Loss:0.12510772049427032 at 6 epoch.
+Loss:0.17907117307186127 at 6 epoch.
+Loss:0.10045813024044037 at 6 epoch.
+Loss:0.11074576526880264 at 6 epoch.
+Loss:0.1106804609298706 at 6 epoch.
+Loss:0.08961427211761475 at 6 epoch.
+EPOCH 7 ...
+Loss:0.14699794352054596 at 7 epoch.
+Loss:0.10344509780406952 at 7 epoch.
+Loss:0.09414506703615189 at 7 epoch.
+Loss:0.10501894354820251 at 7 epoch.
+Loss:0.12401577085256577 at 7 epoch.
+Loss:0.09456868469715118 at 7 epoch.
+Loss:0.11528245359659195 at 7 epoch.
+Loss:0.12533769011497498 at 7 epoch.
+Loss:0.09533756971359253 at 7 epoch.
+Loss:0.09893262386322021 at 7 epoch.
+Loss:0.09498592466115952 at 7 epoch.
+Loss:0.13050472736358643 at 7 epoch.
+Loss:0.10793376713991165 at 7 epoch.
+Loss:0.09757665544748306 at 7 epoch.
+Loss:0.10193917900323868 at 7 epoch.
+Loss:0.12324819713830948 at 7 epoch.
+Loss:0.11107203364372253 at 7 epoch.
+Loss:0.11412189155817032 at 7 epoch.
+Loss:0.10326804220676422 at 7 epoch.
+Loss:0.11681327223777771 at 7 epoch.
+Loss:0.10251714289188385 at 7 epoch.
+Loss:0.09202071279287338 at 7 epoch.
+Loss:0.12578266859054565 at 7 epoch.
+Loss:0.07916375249624252 at 7 epoch.
+Loss:0.1031288355588913 at 7 epoch.
+Loss:0.10921191424131393 at 7 epoch.
+Loss:0.10148676484823227 at 7 epoch.
+Loss:0.07539748400449753 at 7 epoch.
+Loss:0.09435014426708221 at 7 epoch.
+EPOCH 8 ...
+Loss:0.1423359364271164 at 8 epoch.
+Loss:0.09878971427679062 at 8 epoch.
+Loss:0.07645338028669357 at 8 epoch.
+Loss:0.09954524785280228 at 8 epoch.
+Loss:0.0957050696015358 at 8 epoch.
+Loss:0.0877523273229599 at 8 epoch.
+Loss:0.110859714448452 at 8 epoch.
+Loss:0.07519971579313278 at 8 epoch.
+Loss:0.08195590227842331 at 8 epoch.
+Loss:0.09563478082418442 at 8 epoch.
+Loss:0.07105984538793564 at 8 epoch.
+Loss:0.09177933633327484 at 8 epoch.
+Loss:0.10758501291275024 at 8 epoch.
+Loss:0.09391216933727264 at 8 epoch.
+Loss:0.09909505397081375 at 8 epoch.
+Loss:0.08843803405761719 at 8 epoch.
+Loss:0.08114837855100632 at 8 epoch.
+Loss:0.057311344891786575 at 8 epoch.
+Loss:0.0871443897485733 at 8 epoch.
+Loss:0.07631225138902664 at 8 epoch.
+Loss:0.10436934977769852 at 8 epoch.
+Loss:0.10526712238788605 at 8 epoch.
+Loss:0.0889943540096283 at 8 epoch.
+Loss:0.11879134923219681 at 8 epoch.
+Loss:0.09403954446315765 at 8 epoch.
+Loss:0.09758203476667404 at 8 epoch.
+Loss:0.1053861528635025 at 8 epoch.
+Loss:0.09073302149772644 at 8 epoch.
+Loss:0.09598926454782486 at 8 epoch.
+EPOCH 9 ...
+Loss:0.06432542204856873 at 9 epoch.
+Loss:0.06849858164787292 at 9 epoch.
+Loss:0.1002471074461937 at 9 epoch.
+Loss:0.10741990804672241 at 9 epoch.
+Loss:0.07761207222938538 at 9 epoch.
+Loss:0.08054406195878983 at 9 epoch.
+Loss:0.07088227570056915 at 9 epoch.
+Loss:0.07435332238674164 at 9 epoch.
+Loss:0.09562791883945465 at 9 epoch.
+Loss:0.08078368753194809 at 9 epoch.
+Loss:0.12404108047485352 at 9 epoch.
+Loss:0.07388744503259659 at 9 epoch.
+Loss:0.09577178210020065 at 9 epoch.
+Loss:0.0722108781337738 at 9 epoch.
+Loss:0.07701312005519867 at 9 epoch.
+Loss:0.10531987249851227 at 9 epoch.
+Loss:0.07989870011806488 at 9 epoch.
+Loss:0.09819541871547699 at 9 epoch.
+Loss:0.08235976099967957 at 9 epoch.
+Loss:0.11326878517866135 at 9 epoch.
+Loss:0.09274060279130936 at 9 epoch.
+Loss:0.08450588583946228 at 9 epoch.
+Loss:0.10541891306638718 at 9 epoch.
+Loss:0.07912340760231018 at 9 epoch.
+Loss:0.11285613477230072 at 9 epoch.
+Loss:0.10042713582515717 at 9 epoch.
+Loss:0.07472262531518936 at 9 epoch.
+Loss:0.08860313147306442 at 9 epoch.
+Loss:0.13801294565200806 at 9 epoch.
+Model Saved
+Training Finished. Saving test images to: ./runs/1526828437.9194555
